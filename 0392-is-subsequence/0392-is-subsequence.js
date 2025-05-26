@@ -22,10 +22,6 @@ var isSubsequence = function(s, t) {
         
     }
 
-    if (newArr.join("") === s) {
-            return  true   
-        } 
-    else {
-        return false ; 
-    }
+return newArr.join("") === s; 
+   
 };
