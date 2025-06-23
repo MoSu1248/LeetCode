@@ -4,7 +4,32 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-     const cleanStr1 = s.toLowerCase().replace(/[^a-z0-9]/g, '').split('').sort().join('');
-     const cleanStr2 = t.toLowerCase().replace(/[^a-z0-9]/g, '').split('').sort().join('');
-     return cleanStr1 === cleanStr2;
+
+const count = {} ; 
+
+for(let char of s){
+    if(!(char in count)){
+        count[char] = 0
+    }
+    count[char] += 1
+}
+
+for(let char of t){
+    if(char in count){
+        count[char] -= 1
+    }
+    else {
+        return false; 
+    }
+}
+
+for(let char in count){
+    if(count[char] !== 0){
+        return false
+    }
+}
+
+return true
+
+
 };
