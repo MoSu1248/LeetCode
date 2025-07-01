@@ -7,7 +7,7 @@ var numberGame = function(nums) {
     let ans = []; 
 
 
-    for(let i = 0 ; i <= nums.length; i++){
+    for(let i = nums.length ; i >  0 ; i -= 2){
        
         let lowestNumber2 = Math.min(...nums);
         let val2 = nums.indexOf(lowestNumber2);
