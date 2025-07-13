@@ -9,7 +9,7 @@ var countKeyChanges = function(s) {
 
     
 
-    for(let i = 1; i < key.length - 1 ; i++){
+    for(let i = 0; i < key.length - 1 ; i++){
         if(key[i] !== key[i+1]){
             count += 1
         }
