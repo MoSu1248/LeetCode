@@ -4,24 +4,13 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
+    const prevNums = {}; // number -> index
 
-    const arr = []
-
-    
-    for (let i = 1; i < nums.length  ; ) {
-
-        x = target - nums[i] ; 
-
-        if (x + nums[i] === target && nums.includes(x) && nums.indexOf(x) !== i) {
-            arr.push(i , nums.indexOf(x))
-            arr.sort(); 
-            return arr
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+        if (complement in prevNums) {
+            return [prevNums[complement], i];
         }
-        else {
-            i++
-        }
+        prevNums[nums[i]] = i;
     }
-    
-    
-    
 };
