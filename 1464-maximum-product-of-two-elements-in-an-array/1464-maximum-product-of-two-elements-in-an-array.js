@@ -4,20 +4,21 @@
  */
 var maxProduct = function(nums) {
 
-let highest = 0 ; 
+  const newNums =  nums.sort((a, b) => a - b); // Sort descending
 
-      for(let i = 0 ; i < nums.length ; i++){
-    for(let j = i + 1 ; j < nums.length ; j++){
-        let current = 0 ; 
+//       for(let i = 0 ; i < nums.length ; i++){
+//         for(let j = i + 1 ; j < nums.length ; j++){
+//         let current = 0 ; 
+//         current = (nums[i] -1) * (nums[j] - 1); 
+//       if( current > highest){
+//        highest = current  
+//       }
+//     }
+//   }
 
-        current = (nums[i] -1) * (nums[j] - 1); 
+let last = newNums.length - 1 ; 
+let secondLast = newNums.length - 2; 
 
-        console.log(current)
-      if( current > highest){
-       highest = current  
-      }
-    }
-  }
-  return highest 
+    return (newNums[last]-1)*(newNums[secondLast]-1)
 };
 
