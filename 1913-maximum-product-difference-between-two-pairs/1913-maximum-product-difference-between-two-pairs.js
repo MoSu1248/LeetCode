@@ -3,13 +3,7 @@
  * @return {number}
  */
 var maxProductDifference = function(nums) {
+    newNums = nums.sort((a , b) => a - b); 
 
-    nums.sort((a, b) => a -b ); 
-    
-
-    const num1 =  nums[nums.length - 1] * nums[nums.length - 2];
-    const num2 =  nums[0]* nums[1]
-
-    return num1 - num2
-    
+    return ((newNums[nums.length - 2] * newNums[newNums.length - 1]) - (newNums[0] * newNums[1]))
 };
