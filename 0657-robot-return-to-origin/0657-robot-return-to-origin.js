@@ -7,11 +7,7 @@ var judgeCircle = function(moves) {
     let Vorigin= 0; 
     let steps = moves.split('')
 
-
-   
-    
     steps.forEach(number  =>{
-       
 switch (number) {
     case "U":
        Vorigin++ 
@@ -32,8 +28,7 @@ switch (number) {
 
 if(Horigin === 0 && Vorigin === 0){
     return true
-}else {
-    return false
 }
+return false
     
 };
