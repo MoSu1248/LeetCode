@@ -12,12 +12,10 @@ var reverseWords = function(s) {
             
        finalAns.push(ans[i][j])
      }
-     if(i === ans.length-1){
-        break
-     }
-     else{
-            finalAns.push(' '); 
-     }
+     if(i < ans.length-1){
+        finalAns.push(' '); 
+
+    }
     }
 
 return finalAns.join('')
